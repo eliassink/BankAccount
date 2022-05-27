@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account</title>
+</head>
+<body>
+<h1>Bank Account</h1>
+<form>
+    <label for="accountNumber">Account number: </label>
+    <input type="text" id="accountNumber" name="accountNumber"><br>
+    <input type="submit" value="Login">
+</form>
+<p style="color:red" th:text = "${errorMessage}"></p>
+</body>
+</html>

@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
+    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Set up Spring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/ContentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/BankAccountApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +53,20 @@
     "last_directory_selection": "C:/Users/ets13/OneDrive/Documents/Personal Projects/Java/BankAccount/src/main/java",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ets13\OneDrive\Documents\Personal Projects\Java\BankAccount\src\main\resources" />
+      <recent name="C:\Users\ets13\OneDrive\Documents\Personal Projects\Java\BankAccount\src\main\resources\templates" />
+      <recent name="C:\Users\ets13\OneDrive\Documents\Personal Projects\Java\BankAccount\src\main\resources\static" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.Application" />
+    <configuration name="BankAccountApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.BankAccountApplication" />
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
@@ -72,7 +80,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.io.github.eliassink.bankaccount.BankAccountApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -85,6 +93,14 @@
       <option name="presentableId" value="Default" />
       <updated>1653506356518</updated>
     </task>
+    <task id="LOCAL-00001" summary="Set up Spring">
+      <created>1653523234129</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653523234129</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,5 +113,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Set up Spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up Spring" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
