@@ -17,7 +17,7 @@ class ContentControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void testContent() throws Exception {
+    void testContent() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(redirectedUrl("/home.html"));
 

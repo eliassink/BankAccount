@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Bank Account</title>
+    <script>
+        function validate() {
+            let accountNumber = document.getElementById("accountNumber").value;
+            if (!/^\d+$/.test(accountNumber)) {
+                document.getElementById("errorMessage").innerHTML = "Account number required.";
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 <h1>Bank Account</h1>
-<form>
+<form onsubmit="return validate()">
     <label for="accountNumber">Account number: </label>
     <input type="text" id="accountNumber" name="accountNumber"><br>
     <input type="submit" value="Login">
 </form>
-<p style="color:red" th:text = "${errorMessage}"></p>
+<p id="errorMessage" style="color:red" th:text = "${errorMessage}"></p>
 </body>
 </html>
