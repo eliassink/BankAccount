@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Added homepage.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/ContentControllerTest.java" afterDir="false" />
+    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Added content test.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Dollars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/DollarsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/ContentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/ContentControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
@@ -50,7 +54,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,10 +67,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="io.github.eliassink.bankaccount.model" />
       <recent name="io.github.eliassink.bankaccount" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContentControllerTest.testContent">
+  <component name="RunManager">
     <configuration name="BankAccountApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.BankAccountApplication" />
       <module name="BankAccount" />
@@ -88,32 +93,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DollarsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.Dollars" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.ContentControllerTest" />
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.DollarsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContentControllerTest.testContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DollarsTest.testAddition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.Dollars" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.ContentControllerTest" />
-      <option name="METHOD_NAME" value="testContent" />
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.DollarsTest" />
+      <option name="METHOD_NAME" value="testAddition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DollarsTest.testCompare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankAccount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.DollarsTest" />
+      <option name="METHOD_NAME" value="testCompare" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,8 +142,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContentControllerTest.testContent" />
-        <item itemvalue="JUnit.ContentControllerTest" />
+        <item itemvalue="JUnit.DollarsTest.testCompare" />
+        <item itemvalue="JUnit.DollarsTest" />
+        <item itemvalue="JUnit.DollarsTest.testAddition" />
         <item itemvalue="JUnit.All in BankAccount" />
         <item itemvalue="Application.io.github.eliassink.bankaccount.BankAccountApplication" />
       </list>
@@ -151,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653691947336</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added content test.">
+      <created>1653699183975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653699183975</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,7 +197,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up Spring" />
     <MESSAGE value="Added homepage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added homepage." />
+    <MESSAGE value="Added content test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added content test." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
