@@ -2,14 +2,14 @@ package io.github.eliassink.bankaccount.model;
 
 import java.util.Objects;
 
-public final class Dollars implements Comparable<Dollars> {
+public final class Cents implements Comparable<Cents> {
     private final long cents;
 
-    public Dollars(long cents) {
+    public Cents(long cents) {
         this.cents = cents;
     }
 
-    public Dollars() {
+    public Cents() {
         this(0);
     }
 
@@ -21,8 +21,8 @@ public final class Dollars implements Comparable<Dollars> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Dollars dollars = (Dollars) o;
-        return cents == dollars.cents;
+        Cents cents = (Cents) o;
+        return this.cents == cents.cents;
     }
 
     @Override
@@ -30,17 +30,17 @@ public final class Dollars implements Comparable<Dollars> {
         return Objects.hash(cents);
     }
 
-    public Dollars add(Dollars addend) {
-        return new Dollars(cents + addend.cents);
+    public Cents add(Cents addend) {
+        return new Cents(cents + addend.cents);
     }
 
-    public Dollars subtract(Dollars subtrahend) {
-        return new Dollars(cents - subtrahend.cents);
+    public Cents subtract(Cents subtrahend) {
+        return new Cents(cents - subtrahend.cents);
     }
 
     @Override
-    public int compareTo(Dollars otherDollars) {
-        return Long.compare(cents, otherDollars.cents);
+    public int compareTo(Cents otherCents) {
+        return Long.compare(cents, otherCents.cents);
     }
 
     @Override
