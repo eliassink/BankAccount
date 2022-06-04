@@ -13,10 +13,6 @@ public final class Cents implements Comparable<Cents> {
         this(0);
     }
 
-    public long cents() {
-        return cents;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -28,6 +24,10 @@ public final class Cents implements Comparable<Cents> {
     @Override
     public int hashCode() {
         return Objects.hash(cents);
+    }
+
+    public Cents negate() {
+        return new Cents(-cents);
     }
 
     public Cents add(Cents addend) {
