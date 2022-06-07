@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Renamed Dollars to Cents.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" afterDir="false" />
+    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Created Account.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Cents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Cents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_directory_selection": "C:/Users/ets13/OneDrive/Documents/Personal Projects/Java/BankAccount/src/main/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/ets13/OneDrive/Documents/Personal Projects/Java/BankAccount/src/main/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ets13\OneDrive\Documents\Personal Projects\Java\BankAccount\src\main\resources" />
@@ -72,7 +70,7 @@
       <recent name="io.github.eliassink.bankaccount" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testTransactionAmounts">
+  <component name="RunManager" selected="JUnit.AccountTest">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
@@ -88,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testDepositNegativeAmountThrows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testConstructorTransactions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
@@ -98,7 +96,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
       <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
-      <option name="METHOD_NAME" value="testDepositNegativeAmountThrows" />
+      <option name="METHOD_NAME" value="testConstructorTransactions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testDirectModificationOfTransactionsThrows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankAccount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
+      <option name="METHOD_NAME" value="testDirectModificationOfTransactionsThrows" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,29 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testWithdrawNegativeAmountThrows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankAccount" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
-      <option name="METHOD_NAME" value="testWithdrawNegativeAmountThrows" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.AccountTest.testDirectModificationOfTransactionsThrows" />
+        <item itemvalue="JUnit.AccountTest.testConstructorTransactions" />
         <item itemvalue="JUnit.AccountTest.testTransactionAmounts" />
         <item itemvalue="JUnit.AccountTest.testTransactionAmount" />
-        <item itemvalue="JUnit.AccountTest.testWithdrawNegativeAmountThrows" />
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testDepositNegativeAmountThrows" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +211,28 @@
       <option name="project" value="LOCAL" />
       <updated>1654119978732</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added negate() and removed cents().">
+      <created>1654317378167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654317378167</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created Transaction.">
+      <created>1654317403124</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654317403124</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created Account.">
+      <created>1654317440323</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654317440323</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,7 +253,10 @@
     <MESSAGE value="Added input verification." />
     <MESSAGE value="Added Dollars" />
     <MESSAGE value="Renamed Dollars to Cents." />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed Dollars to Cents." />
+    <MESSAGE value="Added negate() and removed cents()." />
+    <MESSAGE value="Created Transaction." />
+    <MESSAGE value="Created Account." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Account." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
