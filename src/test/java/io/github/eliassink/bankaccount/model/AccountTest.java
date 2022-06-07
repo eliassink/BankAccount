@@ -12,15 +12,18 @@ public class AccountTest {
     @Test
     void testConstructor() {
         Date now = new Date();
-        List<Transaction> transactions = List.of(
-                new Transaction(new Cents(100), now),
-                new Transaction(new Cents(-50), new Date(now.getTime() + 10)),
-                new Transaction(new Cents(50), new Date(now.getTime() - 10))
+        Cents c1 = new Cents(25);
+        Cents c2 = new Cents(100);
+        Cents c3 = new Cents(-50);
+        List<Transaction> transactions = List.of( //out of order
+                new Transaction(c2, now),
+                new Transaction(c3, new Date(now.getTime() + 10)),
+                new Transaction(c1, new Date(now.getTime() - 10))
         );
         Account account = new Account(transactions);
-        assertEquals(new Cents(100), account.balance());
-        assertEquals(new Cents(-50),account.transactions().get(0).amount());
-        assertEquals(new Cents(50),account.transactions().get(2).amount());
+        assertEquals(c1.add(c2).add(c3), account.balance());
+        assertEquals(c3,account.transactions().get(0).amount());
+        assertEquals(c1,account.transactions().get(2).amount());
     }
 
     @Test
@@ -71,5 +74,4 @@ public class AccountTest {
         Transaction transaction = new Transaction(new Cents(100),new Date());
         assertThrows(Exception.class, ()-> new Account().transactions().add(transaction));
     }
-
 }

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Added transaction history to Account.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" afterDir="false" />
+    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Made Account final.">
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654569253904</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Made Account final.">
+      <created>1654569768823</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654569768823</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Made Account final.">
+      <created>1654569776327</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654569776327</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,7 +276,8 @@
     <MESSAGE value="Created Transaction." />
     <MESSAGE value="Created Account." />
     <MESSAGE value="Added transaction history to Account." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added transaction history to Account." />
+    <MESSAGE value="Made Account final." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Account final." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
