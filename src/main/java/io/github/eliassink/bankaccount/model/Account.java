@@ -2,7 +2,7 @@ package io.github.eliassink.bankaccount.model;
 
 import java.util.*;
 
-public class Account {
+public final class Account {
     private Cents balance;
     private final LinkedList<Transaction> transactions;
 
