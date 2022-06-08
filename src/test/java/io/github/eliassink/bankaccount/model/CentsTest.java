@@ -45,7 +45,13 @@ class CentsTest {
 
     @Test
     void testToStringNegative() {
-        assertEquals("-$1.25", new Cents(-125).toString());
+        assertEquals("-$1.00", new Cents(-100).toString());
+    }
+
+    @Test
+    void testParseCents() {
+        assertEquals(new Cents(125),Cents.parseCents("$1.25"));
+        assertEquals(new Cents(-100),Cents.parseCents("-$1.00"));
     }
 
 }

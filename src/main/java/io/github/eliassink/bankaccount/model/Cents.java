@@ -48,4 +48,10 @@ public final class Cents implements Comparable<Cents> {
         return (cents < 0 ? "-" : "") + '$' + Math.abs(cents / 100)
                 + '.' + (cents % 100 == 0 ? "00" : Math.abs(cents % 100));
     }
+
+    static Cents parseCents(String string) {
+        if (!string.matches("-?\\$?\\d*\\.\\d\\d"))
+            throw new NumberFormatException("invalid format");
+        return new Cents(Long.parseLong(string.replaceAll("[$.]","")));
+    }
 }
