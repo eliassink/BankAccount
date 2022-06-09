@@ -13,7 +13,7 @@ public final class Account {
 
     public Account(Collection<Transaction> transactions) {
         this.transactions = new LinkedList<>(transactions);
-        this.transactions.sort(Comparator.comparing(Transaction::date));
+        this.transactions.sort(Comparator.comparing(Transaction::date).reversed());
         balance = this.transactions.stream().map(Transaction::amount).reduce(new Cents(), Cents::add);
     }
 

@@ -22,8 +22,8 @@ public class AccountTest {
         );
         Account account = new Account(transactions);
         assertEquals(c1.add(c2).add(c3), account.balance());
-        assertEquals(c1,account.transactions().get(0).amount());
-        assertEquals(c3,account.transactions().get(2).amount());
+        assertEquals(c1,account.transactions().get(2).amount());
+        assertEquals(c3,account.transactions().get(0).amount());
     }
 
     @Test
