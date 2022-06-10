@@ -49,7 +49,7 @@ public final class Cents implements Comparable<Cents> {
                 + '.' + (cents % 100 == 0 ? "00" : Math.abs(cents % 100));
     }
 
-    static Cents parseCents(String string) {
+    public static Cents parseCents(String string) {
         if (!string.matches("-?\\$?\\d*\\.\\d\\d"))
             throw new NumberFormatException("invalid format");
         return new Cents(Long.parseLong(string.replaceAll("[$.]","")));
