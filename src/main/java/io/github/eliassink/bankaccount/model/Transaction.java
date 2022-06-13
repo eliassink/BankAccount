@@ -1,6 +1,6 @@
 package io.github.eliassink.bankaccount.model;
 
-import java.util.Date;
+import java.time.ZonedDateTime;
 
-public record Transaction(Cents amount, Date date) {
+public record Transaction(Cents amount, ZonedDateTime date) {
 }

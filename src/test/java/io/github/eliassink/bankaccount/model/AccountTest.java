@@ -2,23 +2,23 @@ package io.github.eliassink.bankaccount.model;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
+import java.time.ZonedDateTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AccountTest {
 
     @Test
     void testConstructor() {
-        Date now = new Date();
         Cents c1 = new Cents(25);
         Cents c2 = new Cents(100);
         Cents c3 = new Cents(-50);
         List<Transaction> transactions = List.of( //out of order
-                new Transaction(c2, now),
-                new Transaction(c3, new Date(now.getTime() + 10)),
-                new Transaction(c1, new Date(now.getTime() - 10))
+                new Transaction(c2, ZonedDateTime.now()),
+                new Transaction(c3, ZonedDateTime.now().plusSeconds(1)),
+                new Transaction(c1, ZonedDateTime.now().minusSeconds(1))
         );
         Account account = new Account(transactions);
         assertEquals(c1.add(c2).add(c3), account.balance());
@@ -71,7 +71,7 @@ public class AccountTest {
 
     @Test
     void testDirectModificationOfTransactionsThrows() {
-        Transaction transaction = new Transaction(new Cents(100),new Date());
+        Transaction transaction = new Transaction(new Cents(100), ZonedDateTime.now());
         assertThrows(Exception.class, ()-> new Account().transactions().add(transaction));
     }
 }

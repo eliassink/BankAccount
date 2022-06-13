@@ -1,5 +1,6 @@
 package io.github.eliassink.bankaccount.model;
 
+import java.time.ZonedDateTime;
 import java.util.*;
 
 public final class Account {
@@ -25,7 +26,7 @@ public final class Account {
         if (amount.compareTo(new Cents(0)) < 0)
             throw new IllegalArgumentException("negative deposit amount");
         balance = balance.add(amount);
-        transactions.addFirst(new Transaction(amount,new Date()));
+        transactions.addFirst(new Transaction(amount, ZonedDateTime.now()));
         return this;
     }
 
@@ -33,7 +34,7 @@ public final class Account {
         if (amount.compareTo(new Cents(0)) < 0)
             throw new IllegalArgumentException("negative withdrawal amount");
         balance = balance.subtract(amount);
-        transactions.addFirst(new Transaction(amount.negate(),new Date()));
+        transactions.addFirst(new Transaction(amount.negate(),ZonedDateTime.now()));
         return this;
     }
 
