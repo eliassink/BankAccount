@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Reversed order of transaction list.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/data/FileAccountManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/data/FileAccountManagerTest.java" afterDir="false" />
+    <list default="true" id="7fc08902-f844-4d3f-8d2e-b298f29eb403" name="Changes" comment="Removed Account and Cents, added Bank and JPA repo for transactions.">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/jpa/JPABank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/jpa/TransactionEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/jpa/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/jpa/JPABankTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Cents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Cents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/CentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/CentsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/BankAccountApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/BankAccountApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/ContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Cents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/eliassink/bankaccount/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/AccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/eliassink/bankaccount/model/CentsTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +31,32 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Record" />
+        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,97 +95,102 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="io.github.eliassink.bankaccount.model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.github.eliassink.bankaccount.jpa" />
+      <recent name="io.github.eliassink.bankaccount.model" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="io.github.eliassink.bankaccount.model" />
       <recent name="io.github.eliassink.bankaccount" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CentsTest.testParseCents">
-    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.BankAccountApplication">
+    <configuration name="BankAccountApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.BankAccountApplication" />
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JPABankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankAccount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.jpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.jpa" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.jpa.JPABankTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testConstructorTransactions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JPABankTest.testBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.jpa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
-      <option name="METHOD_NAME" value="testConstructorTransactions" />
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.jpa" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.jpa.JPABankTest" />
+      <option name="METHOD_NAME" value="testBalance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testDirectModificationOfTransactionsThrows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JPATransactionRepositoryTest.testAllSent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.jpa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.AccountTest" />
-      <option name="METHOD_NAME" value="testDirectModificationOfTransactionsThrows" />
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.jpa" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.jpa.JPATransactionRepositoryTest" />
+      <option name="METHOD_NAME" value="testAllSent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CentsTest.testParseCents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JPATransactionRepositoryTest.testPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankAccount" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.model.*" />
+          <option name="PATTERN" value="io.github.eliassink.bankaccount.jpa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.model" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.model.CentsTest" />
-      <option name="METHOD_NAME" value="testParseCents" />
+      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.jpa" />
+      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.jpa.JPATransactionRepositoryTest" />
+      <option name="METHOD_NAME" value="testPost" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileAccountManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankAccount" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.github.eliassink.bankaccount.data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.github.eliassink.bankaccount.data" />
-      <option name="MAIN_CLASS_NAME" value="io.github.eliassink.bankaccount.data.FileAccountManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CentsTest.testParseCents" />
-        <item itemvalue="JUnit.FileAccountManagerTest" />
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testDirectModificationOfTransactionsThrows" />
-        <item itemvalue="JUnit.AccountTest.testConstructorTransactions" />
+        <item itemvalue="Application.BankAccountApplication" />
+        <item itemvalue="JUnit.JPABankTest" />
+        <item itemvalue="JUnit.JPABankTest.testBalance" />
+        <item itemvalue="JUnit.JPATransactionRepositoryTest.testPost" />
+        <item itemvalue="JUnit.JPATransactionRepositoryTest.testAllSent" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +301,35 @@
       <option name="project" value="LOCAL" />
       <updated>1654570806319</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added parseCents">
+      <created>1654726784892</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654726784892</updated>
+    </task>
+    <task id="LOCAL-00016" summary="transactions() is sorted from latest to earliest date.">
+      <created>1654740342154</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654740342154</updated>
+    </task>
+    <task id="LOCAL-00017" summary="parseCents() changed to public">
+      <created>1654829379410</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654829379410</updated>
+    </task>
+    <task id="LOCAL-00018" summary="java.util.Date replaced by java.time.ZonedDateTime">
+      <created>1655142317616</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655142317616</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +357,12 @@
     <MESSAGE value="Made Account final." />
     <MESSAGE value="Clarified constructor test." />
     <MESSAGE value="Reversed order of transaction list." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reversed order of transaction list." />
+    <MESSAGE value="Added parseCents" />
+    <MESSAGE value="transactions() is sorted from latest to earliest date." />
+    <MESSAGE value="parseCents() changed to public" />
+    <MESSAGE value="java.util.Date replaced by java.time.ZonedDateTime" />
+    <MESSAGE value="Removed Account and Cents, added Bank and JPA repo for transactions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Account and Cents, added Bank and JPA repo for transactions." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

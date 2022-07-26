@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 class ContentController {
+
+
     @GetMapping
     public String root() {
         return "redirect:/home.html";
